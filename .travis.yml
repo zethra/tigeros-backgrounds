@@ -1,14 +1,14 @@
 sudo: enable
 install:
-  - sudo apt-get install docker
-  - docker pull zethra/tigeros-build
+- sudo apt-get install docker
+- docker pull zethra/tigeros-build
 script:
-  - docker run -v `pwd`:/build zethra/tigeros-build 
+- docker run -v `pwd`:/build zethra/tigeros-build
 deploy:
   provider: release
   api_key:
-    secure: "DfE9qvIjehazBCWReJeQOIzmvLPpVlZU5G+ZcdM5qcYMIb2pdR0JKrs+8t6otk6DkUWbuXIVSqAnUXUiqq4jT/Df6p5VnKsJ31qSINA6WzsYtvTIj11twdQahmIDK6X9RNHR01UbzWV7V4hOMAfPbO8DuXOdQGX+lrxfjil1Qtcxe5QF0n7TpULhCi6+aeDPGVeU5ByZybjjIpp+HixBkE8DQ2EPJckdxKBcIt93p+4WNU512D6dBuLCBB4uxj7VyPvqazGjhgwPmRXTIICK0yAXPNGUvRyOkbPdaC9SUfFU1MxoQf9c6VlAJZcae2WtEnnDeeJW3k/t/yg+KgciUz+/JVg8wZu4Prk0Y4TiHu8w7xuqvB3oaEE0RpU4jC05YN+zPH5+xL7NLJVff7GvOXWk53kWYVRcNboCWKVvyHwT/u6LwQmb1/APjSp4J/QFzkVf55GlymNX7M2vDsSYo+13EleqHwccKeTgFTIUeYvV7UqpldDUZnxCPrWp/BW0RxPN42szsmXSZ4zXwt7hMgDmMwkcVo1sxjtDFsGZeOjL/CH54nzQhF6cQ9J6JzpRd6rJBvl1zhDfDualG5gXN6KkpFRSCSfoPNyy5cDg9I7HVONxpw0cCmrhMurtWQILTK5Dd9iljiRLAHwT61jy2tXSGIbmW7dn9UNzDbnICEo="
-  file: "noarch/tigeros-backgrounds-1.0-16.fc27.noarch.rpm"
+    secure: "z0Zt9G75Hu2DfPbMuFtvEypLThc2WPMGHwF5iPKRGaUcG4Gwl/zs26dtQJNr7o5e7IPfunjBotH36DHgZwNTZWhOVc9kZbObHaC6mTrUZ7XWitZOcFwg3IOuRPVo3Oox3DB3IxgAZaspK0vo3e4gJmjaCkMcb8mERayDamVMB1/9CcrE+2YRMoWLf8tKYxWAX/YUlBKENYcMOBg1xdiMQgb1NedYFt0i0D1X6gAPGmEQwkFCJ139qysT4rKy9QdS8L0zQK++HRgcgGIcu+WS/QIL6M7PlKhbXlIPTXRI9bLF5hhC2oCrwohMETwxGZporFl9RAi5mZ+IlrifECAZ4kklaws56+iJgFKkleK29KkDN6lDr2H4wkZGM714CmC/0+nHsoWCLpagarCnt3XDivqxaqqZlnE9JO6ylgsfaYJoKxohFlJl7khQhUzvwHHOunSvALv3p6rbagsEyJAShcckQwYuFkH0gUw1FFdbW0fWeJbFjbKTPEMOgYfBXladwxdt47ujX85LVU1pdeTz8PBwW0d/6IxDjenIN+rfCFXOQNB8TIJUsbiTnh8rqyMCCoWxCmXMCGrvrfFEZqWp05s8b72eqYDxRy4yxQKJHzEMInF+yVgAnj9C60SzyGtOAf1anEPGIKd6lJEJfkv6Y3gaksYaCWSJOzSnYsGW6r4="
+  file: noarch/tigeros-backgrounds-1.0-16.fc27.noarch.rpm
   skip_cleanup: true
   on:
     tags: true
