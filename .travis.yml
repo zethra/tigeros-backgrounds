@@ -1,3 +1,4 @@
+language: c
 sudo: enable
 install:
 - sudo apt-get install docker
