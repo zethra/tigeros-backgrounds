@@ -1,12 +1,12 @@
 language: c
 sudo: enable
-before_install:
-- openssl aes-256-cbc -K $encrypted_2f15ab48d7e8_key -iv $encrypted_2f15ab48d7e8_iv -in deploy_rsa.enc -out deploy_rsa -d
 install:
 - sudo apt-get install docker
 - docker pull zethra/tigeros-build
 script:
 - docker run -v `pwd`:/build zethra/tigeros-build
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_2f15ab48d7e8_key -iv $encrypted_2f15ab48d7e8_iv -in deploy_rsa.enc -out deploy_rsa -d
 deploy:
   provider: script
   script: bash deploy.sh
